@@ -1,0 +1,23 @@
+{
+  "top_1": {
+    "model_name": "decision_tree",
+    "feature_selection": "k8",
+    "cv_accuracy": 0.3333333333333333,
+    "test_accuracy": 0.4444444444444444,
+    "run_id": "4da5207b3a6b44fd9e20e1da0d44a791"
+  },
+  "top_2": {
+    "model_name": "random_forest",
+    "feature_selection": "k5",
+    "cv_accuracy": 0.3333333333333333,
+    "test_accuracy": 0.3333333333333333,
+    "run_id": "34b071df0c7b407cb1615e58281cad41"
+  },
+  "top_3": {
+    "model_name": "random_forest",
+    "feature_selection": "k8",
+    "cv_accuracy": 0.38095238095238093,
+    "test_accuracy": 0.3333333333333333,
+    "run_id": "8ca3b0568a264132870eb424671a8d11"
+  }
+}
