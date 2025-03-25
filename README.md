@@ -5,9 +5,13 @@ This repository contains materials, code, and documentation for my MLOps course 
 ## Project Structure
 mlops_project/
 ├── data/                # Dataset storage
+
 ├── notebooks/          # Jupyter notebooks for exploration and analysis
+
 ├── models/             # Trained ML models
+
 ├── requirements.txt    # Package dependencies
+
 └── README.md           # Project documentation
 
 
