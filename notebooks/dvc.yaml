@@ -1,0 +1,11 @@
+stages:
+  preprocess:
+    cmd: python src/preprocessing.py
+    deps:
+      - data/gold_demand.csv
+      - src/preprocessing.py
+    outs:
+      - data/processed_train_data.csv
+      - data/processed_test_data.csv
+      - data/train_labels.csv
+      - data/test_labels.csv 

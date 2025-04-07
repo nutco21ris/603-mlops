@@ -1,2 +1,7 @@
 /adult.data
 /adult.test
+/gold_demand.csv
+/processed_train_data.csv
+/processed_test_data.csv
+/train_labels.csv
+/test_labels.csv

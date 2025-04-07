@@ -1,0 +1,5 @@
+outs:
+- md5: 3f8d34ae7c39b3ca7dc12d9309ca8d7d
+  size: 2470
+  hash: md5
+  path: gold_demand.csv
