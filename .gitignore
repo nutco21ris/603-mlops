@@ -1,2 +1,34 @@
-sa-private-key.json
-mlflow-sa-key.json
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Metaflow
+.metaflow/
+
+# MLflow
+mlruns/
+
+# Sensitive information
+*.key
+*.pem
+*.env
+config.ini
+secrets.yaml
+
+# Logs
+*.log
