@@ -29,6 +29,14 @@ mlruns/
 *.env
 config.ini
 secrets.yaml
+*-sa-key.json
+*-private-key.json
+mlflow-sa-key.json
+sa-private-key.json
 
 # Logs
 *.log
+
+# Generated files
+predictions.csv
+test_wine.csv
