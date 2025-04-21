@@ -1,0 +1,11 @@
+FROM python:3.12-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+COPY init_db.sh .
+
+RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN chmod +x init_db.sh
+
+ENTRYPOINT ["./init_db.sh"]
