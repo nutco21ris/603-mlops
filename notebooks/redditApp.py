@@ -12,7 +12,7 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# 加载模型
+# Load model
 model = joblib.load("data/reddit_model_pipeline.joblib")
 
 @app.get("/")

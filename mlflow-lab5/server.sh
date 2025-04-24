@@ -5,7 +5,7 @@ echo "Starting MLflow server..."
 echo "PostgreSQL URL: $POSTGRESQL_URL"
 echo "Storage URL: $STORAGE_URL"
 
-# 启动MLflow服务器，不再尝试初始化数据库
+# Start MLflow server without attempting to initialize database
 exec mlflow server \
   --host 0.0.0.0 \
   --port 8080 \

@@ -12,22 +12,22 @@ class GoldDemandFeatures(BaseModel):
     Q3_20: float
     Q4_20: float
 
-# 在启动时加载模型
+# Load model at startup
 model = None
 
 @app.on_event("startup")
 async def load_model():
     global model
-    # 设置MLflow tracking URI为本地
+    # Set MLflow tracking URI to local
     mlflow.set_tracking_uri("file:../mlruns")
     
-    # 获取实验ID
+    # Get experiment ID
     experiment_name = "gold_demand_prediction"
     experiment = mlflow.get_experiment_by_name(experiment_name)
     if experiment is None:
         raise Exception(f"Experiment {experiment_name} not found")
         
-    # 获取最新的run
+    # Get latest run
     runs = mlflow.search_runs(
         experiment_ids=[experiment.experiment_id],
         order_by=["start_time DESC"],
@@ -45,7 +45,7 @@ async def predict(features: GoldDemandFeatures):
         if model is None:
             raise HTTPException(status_code=500, detail="Model not loaded")
             
-        # 转换特征为DataFrame
+        # Convert features to DataFrame
         feature_dict = {
             "Q1'20": features.Q1_20,
             "Q2'20": features.Q2_20,
@@ -54,7 +54,7 @@ async def predict(features: GoldDemandFeatures):
         }
         df = pd.DataFrame([feature_dict])
         
-        # 使用模型预测
+        # Use model to predict
         prediction = model.predict(df)
         return {"prediction": float(prediction[0])}
     except Exception as e:
