@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reddit-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: reddit-app
+  template:
+    metadata:
+      labels:
+        app: reddit-app
+    spec:
+      containers:
+      - name: reddit-app
+        image: gcr.io/${GCP_PROJECT_ID}/reddit-app@${GCP_IMAGE_DIGEST}
+        ports:
+        - containerPort: 8000
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+          requests:
+            memory: "256Mi"
+            cpu: "250m" 
